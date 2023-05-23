@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Fitness Together, John's Creek, women, men, exercise, lifestyle">
+        <meta name="author" content="Roni Ruadap">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://davfzwy2it6ms.cloudfront.net/files/favicons/2022/favicon.ico?v=0.1">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="css/stylesheet2.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
+        <script src="https://kit.fontawesome.com/7988c1ab6d.js" crossorigin="anonymous"></script>
+        <script>
+            window.addEventListener("load", function() {
+                const modal = document.getElementById('myModal');
+                const close = document.getElementsByClassName("close")[0];
+                const applyBtn = document.getElementById("apply-btn");
+                const form = document.getElementById('my-form');
+
+                const btns = document.querySelectorAll("#apply-btn");
+                btns.forEach(applyBtn => {
+                    applyBtn.addEventListener("click", function() {
+                        modal.style.display = "block";
+                    });
+            
+                    close.onclick = function() {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                })
+                const forms = document.querySelectorAll('#my-form');
+                forms.forEach(form => {
+                  form.addEventListener('submit', event => {
+                    event.preventDefault();
+                    const data = new FormData(form);
+                    const action = form.action;
+                    document.getElementById("signup").setAttribute("value", "Loading...")
+                    fetch(action, {
+                      method: 'POST',
+                      body: data,
+                    })
+                    .then(() => {
+                      window.location.href = "thankyou-page.html";
+                    })
+                    .catch(error => {
+                      console.error('Error:', error);
+                    });
+                  });
+                });
+            });
+        </script>
+        <meta name="og:type" content="website" />
+        <div id="white-card">
+            <div class="socialmedia-icons">
+                <a class="fa-brands fa-instagram fa-2x" href="https://www.instagram.com/fitnesstogetherjc/"></a>
+                <a class="fa-brands fa-facebook-f fa-2x" href="https://www.facebook.com/fitnesstogetherjohnscreek/"></a>
+                <a class="fa-brands fa-twitter fa-2x" href="https://twitter.com/FTDunandJC"></a>
+                <a class="fa-brands fa-youtube fa-2x" href="https://www.youtube.com/channel/UCA8EkGXb1sjqSqlinxv5ALQ"></a>
+            </div>
+            <a target="_blank" href="https://fitnesstogether.com/johnscreek"><img class="logo" src="img/ft-logo.png" alt="fitness together logo" /></a>
+            <h3><span class="address">11705 JONES BRIDGE RD, SUITE C104 JOHNS CREEK, GA 30005</span> <span class="line">|</span> <span class="phone">678.867.0101</span></h3>
+            <div id="blue-card">
+                <div class="text">
+                    <h1>Age Defying Fitness</h1>
+                    <svg width="350" height="10">
+                        <rect width="350" height="7" style="fill:#8FCB43;"/>
+                    </svg>
+                    <h2>Private and Personalized <br> Training for Men and Women 40+</h2>
+                </div>
+            </div>
+        </div>
+    <script defer data-domain="fitnesstogether-mgmt-jc.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script></head>
+    <body style="margin:0;background:#e1f4ff">
+        <div class="wrapper" id="top-image">
+            <div class="signup-form">
+                <form method="POST" id="my-form"
+                action="https://script.google.com/macros/s/AKfycbw4UO32IZ5fMOKMTOPHDPyaueOpF7rwbT1mQD4rNqb754wzZ7lIH8WFdlC7OHRMgCbnlQ/exec">
+                    <h2>FILL OUT FORM TO APPLY</h2>
+                    <div class="contents">
+                        <h3>Personal Information</h3>
+                        <h4>Full Name</h4>
+                        <input name="First Name" type="text" placeholder="First Name" required />
+                        <input name="Last Name" type="text" placeholder="Last Name" required />
+                        <h3>Contact Information</h3>
+                        <input name="Phone Number" type="tel" placeholder="Phone Number" required />
+                        <input name="Email" type="email" placeholder="your-email@email.com" required />
+                        <div class="submit-button">
+                            <input id="signup" type="submit" value="Sign Up" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="below">
+            <div class="apply-now" id="apply-btn">
+                <div class="apply-button">
+                    <i class="fa-solid fa-angles-right fa-4x"></i>
+                    <input type="button" value="Apply Now" />
+                    <i class="fa-solid fa-angles-left fa-4x"></i>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form method="POST" id="my-form"
+                    action="https://script.google.com/macros/s/AKfycbw4UO32IZ5fMOKMTOPHDPyaueOpF7rwbT1mQD4rNqb754wzZ7lIH8WFdlC7OHRMgCbnlQ/exec">
+                        <h2>Fill the form to apply for a <br> trial session</h2>
+                        <h3>Personal Information</h3>
+                        <h4>Full Name</h4>
+                        <input name="First Name" type="text" placeholder="First Name" required />
+                        <input name="Last Name" type="text" placeholder="Last Name" required />
+                        <h3>Contact Information</h3>
+                        <input name="Phone Number" type="tel" placeholder="Phone Number" required />
+                        <input name="Email" type="email" placeholder="your-email@email.com" required />
+                        <input type="submit" value="Apply" />
+                    </form>
+                </div>
+            </div>
+            <div class="extra-info">
+                <div class="row">
+                    <div class="column">
+                        <div class="personal">
+                            <h4>Our private personal training program combines expert guidance, customized 
+                                workouts, and nutritional coaching, to help you reach your full potential. </h4>
+                            <ul>
+                                <li>
+                                    <span>Our Nationally Certified Coaches will work with you 1-on-1 in our private 
+                                    studio environment to create a program that is not only tailored to your 
+                                    individual needs and goals, but also efficient and effective. They will guide you 
+                                    through proper form and technique, ensuring that you avoid injury and get the most out of your workouts. </span>
+                                </li>
+                                <li><span>With Nutritinal Coaching, we will work with you to create a customized plan 
+                                    that fits your lifestyle and goals, and will guide and support you to make healthy 
+                                    choices and fuel your body for optimal performance.</span>
+                                </li>
+                                <li><span>With our Accountability Program, you'll have someone in your corner to hold you 
+                                    accountable and keep you on track. Our experienced coaches will help you set realistic 
+                                    goals, create a plan of action, and provide ongoing support and motivation to ensure your success.</span>
+                                </li>
+                                <li><span>State-of-the-art 3D Styku body scan provides an accurate, detailed, and comprehensive 
+                                    view of your body's composition, including body measurements, body fat percentage, muscle mass, and more. 
+                                    Providing a clear roadmap of your progresss towards your goals.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <h4>Are you tired of feeling the effects of aging on your body?</h4>
+                        <p>It's time to turn back the clock and uncover the youthful,
+                            energetic you. Our "Age Defying" fitness program is designed 
+                            to help you fight the signs of aging and achieve a healthy, 
+                            vibrant body.<br><br>Our expert trainers have designed a program that 
+                            combines strength training, cardio, functional exercises and 
+                            nutrition to help you improve your flexibility, balance, and 
+                            overall fitness and health.<br><br>Whether you're in your 40s or 60s,
+                            our program will help you defy your age and feel better than 
+                            ever before.<br>
+                        </p> -->
+                    </div>
+                    <div class="column">
+                        <video style="text-align: center;" height="700" controls>
+                            <source src="img/IMG_0846.MOV" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="quote quote2">
+                        <i class="quotations left fa-solid fa-quote-left"></i>
+                        <i class="quotations back left left2 fa-solid fa-quote-left"></i>
+                        <blockquote>
+                            I have been working with Asis for a few months now and I already feel a 
+                            lot stronger and healthier. Asis is an incredibly professional and 
+                            knowledgeable trainer. He is someone who invests 100% in you and pushes 
+                            you to the limit. He has always kept me motivated to achieve my goal, 
+                            always checking in on me even when I am not in the gym. I Highly recommend 
+                            Fitness Together and Asis for your fitness journey!<br><br><span class="review">– Rakesh</span>
+                        </blockquote>
+                        <i class="quotations right fa-solid fa-quote-right"></i>
+                        <i class="quotations back right right2 fa-solid fa-quote-right"></i>
+                    </div>
+                </div>
+                <!-- <div class="image-section">
+                    <img src="img/Copy of Testimonials! STYKU.jpg" />
+                    <img src="img/Copy of Testimonials! STYKU 2.jpg" />
+                </div> -->
+                <!-- <div class="personal">
+                    <h4>Our private personal training program combines expert guidance, customized 
+                        workouts, and nutritional coaching, to help you reach your full potential. </h4>
+                    <ul>
+                        <li>
+                            <span>Our Nationally Certified Coaches will work with you 1-on-1 in our private 
+                            studio environment to create a program that is not only tailored to your 
+                            individual needs and goals, but also efficient and effective. They will guide you 
+                            through proper form and technique, ensuring that you avoid injury and get the most out of your workouts. </span>
+                        </li>
+                        <li><span>With Nutritinal Coaching, we will work with you to create a customized plan 
+                            that fits your lifestyle and goals, and will guide and support you to make healthy 
+                            choices and fuel your body for optimal performance.</span>
+                        </li>
+                        <li><span>With our Accountability Program, you'll have someone in your corner to hold you 
+                            accountable and keep you on track. Our experienced coaches will help you set realistic 
+                            goals, create a plan of action, and provide ongoing support and motivation to ensure your success.</span>
+                        </li>
+                        <li><span>State-of-the-art 3D Styku body scan provides an accurate, detailed, and comprehensive 
+                            view of your body's composition, including body measurements, body fat percentage, muscle mass, and more. 
+                            Providing a clear roadmap of your progresss towards your goals.</span>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="image-section image-section-2">
+                    <img src="img/Frame 1.jpg" />
+                    <img src="img/Frame 2.jpg" />
+                </div>
+                <img class="logo2" src="/img/ft-logo2.png">
+                <div class="quote">
+                    <i class="quotations left fa-solid fa-quote-left"></i>
+                    <i class="quotations back left left2 fa-solid fa-quote-left"></i>
+                    <blockquote>
+                        Fitness Together is the Rolls Royce of fitness!  I am so glad I joined.  
+                        Since joining my strength has increased dramatically.  I have greater mobility.
+                        Stress level has decreased.  I feel so much better overall.  This is one of the 
+                        best decisions I have made.<br><br><span class="review">– Linda Simpson</span>
+                    </blockquote>
+                    <i class="quotations right fa-solid fa-quote-right"></i>
+                    <i class="quotations back right right2 fa-solid fa-quote-right"></i>
+                </div>
+            </div>
+            <div id="blue-card2">
+                <div class="fitness">
+                    <h3>It's time to take your fitness and wellness to the next level</h3>
+                    <svg width="350" height="10">
+                        <rect width="350" height="3" style="fill:#8FCB43;"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="wrapper" id="footer">
+                    <div class="altogether">
+                        <div class="apply-now apply-now2" id="apply-btn">
+                            <div class="apply-button">
+                                <i class="fa-solid fa-angles-right fa-4x"></i>
+                                <input type="button" value="Apply Now" />
+                                <i class="fa-solid fa-angles-left fa-4x"></i>
+                            </div>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form method="POST" id="my-form"
+                                action="https://script.google.com/macros/s/AKfycbw4UO32IZ5fMOKMTOPHDPyaueOpF7rwbT1mQD4rNqb754wzZ7lIH8WFdlC7OHRMgCbnlQ/exec">
+                                    <h2>Fill the form to apply for a <br> trial session</h2>
+                                    <h3>Personal Information</h3>
+                                    <h4>Full Name</h4>
+                                    <input name="First Name" type="text" placeholder="First Name" required />
+                                    <input name="Last Name" type="text" placeholder="Last Name" required />
+                                    <h3>Contact Information</h3>
+                                    <input name="Phone Number" type="tel" placeholder="Phone Number" required />
+                                    <input name="Email" type="email" placeholder="your-email@email.com" required />
+                                    <input type="submit" value="Apply" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="socialmedia-icons2">
+                            <a target="_blank" class="fa-brands fa-instagram fa-2x" href="https://www.instagram.com/fitnesstogetherjc/"></a>
+                            <a target="_blank" class="fa-brands fa-facebook-f fa-2x" href="https://www.facebook.com/fitnesstogetherjohnscreek/"></a>
+                            <a target="_blank" class="fa-brands fa-twitter fa-2x" href="https://twitter.com/FTDunandJC"></a>
+                            <a target="_blank" class="fa-brands fa-youtube fa-2x" href="https://www.youtube.com/channel/UCA8EkGXb1sjqSqlinxv5ALQ"></a>
+                        </div>
+                        <h3 class="footer-address"><span class="address">11705 JONES BRIDGE RD, SUITE C104 JOHNS CREEK, GA 30005</span> <span class="line">|</span> <span class="phone">678.867.0101</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
