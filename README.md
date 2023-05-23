@@ -1,2 +1,5 @@
-# fitnesstogether_landingpage
-Fitness Together Dunwoody and John's Creek Landing Page
+# Fitness Together Landing Page
+Fitness Together Dunwoody and John's Creek
+
+![preview](img/FT_landingpage.png)
+
