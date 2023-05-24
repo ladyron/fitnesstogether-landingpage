@@ -3,6 +3,7 @@ A landing page for Fitness Together Dunwoody and John's Creek to supplement an a
 
 
 # Fitness Together John's Creek Landing Page
+## The site is [live](https://fitnesstogether-mgmt-jc.tiiny.site/)
 ![preview](img/FT_landingpage.png)
 
 # Fitness Together John's Creek Thank You Page
