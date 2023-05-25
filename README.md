@@ -9,3 +9,5 @@ A landing page for Fitness Together Dunwoody and John's Creek to supplement an a
 # Fitness Together John's Creek Thank You Page
 ![preview](img/FT_thankyoupage.png)
 
+<br><br>
+[Back to top](# Fitness Together Landing Page)
